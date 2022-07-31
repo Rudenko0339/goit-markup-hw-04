@@ -46,24 +46,6 @@ img {
 }
 /* хедер навигация  */
 
-.header {
-  /* align-items: center; */
-  border-bottom: 1px solid #ececec;
-}
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-/* .logo-container {
-  display: flex;
-} */
-.header-nav {
-  display: flex;
-  align-items: center;
-}
 .header-link {
   display: block;
   padding-top: 32px;
@@ -74,30 +56,41 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+
 .header-link:hover,
 .header-link:focus {
   color: var(--acсent-color);
 }
 
-.header-menu-list {
+.header-nav {
   display: flex;
-  /* margin-left: 93px; */
-  padding: 0;
   align-items: center;
 }
-
-.header-menu-item:not(:last-child) {
-  margin-right: 50px;
+.header-list {
+  display: flex;
+  margin-left: 93px;
+  padding: 0;
 }
-/* .header-nav .header-item + .header-item {
+
+.header-nav .header-item + .header-item {
   margin-left: 50px;
-} */
+}
 
 .header-link.current {
   color: var(--acсent-color);
 }
-/* --------хедер лого------- */
 
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container-header {
+  display: flex;
+}
 .logo {
   color: #000000;
   font-family: "raleway";
@@ -106,34 +99,24 @@ img {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
-  margin-right: 93px;
 }
+
 .blue-logo {
   color: var(--acсent-color);
 }
 
-/* навигация авторизации */
-.header-contact-list {
-  display: flex;
-  gap: 30px;
-  margin-left: auto;
-  /* align-items: center; */
+.header {
+  align-items: center;
+  border-bottom: 1px solid #ececec;
 }
-.header-contact-item {
+
+.header-auth {
   display: flex;
+  gap: 50px;
+  margin-left: auto;
   align-items: center;
 }
 
-.header-mail {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.header-icon {
-  margin-right: 10px;
-  /* background-position: center;
-  background-size: contain; */
-  /* padding: 0; */
-}
 .header-contact {
   color: var(--title-text-color);
   font-weight: 500;
@@ -141,14 +124,24 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   padding: 32px 0;
-  display: block;
+  display: flex;
+  align-items: center;
 }
 .header-contact:hover,
 .header-contact:focus {
   color: var(--acсent-color);
 }
 
+/* навигация авторизации */
+
+.header-icon {
+  margin-right: 10px;
+  align-items: center;
+  fill: currentColor;
+}
+
 /* ----------герой--------*/
+
 .hero {
   /* background-color: #2f303a; */
   text-align: center;
@@ -235,10 +228,7 @@ img {
   width: calc((100% - 90px) / 4);
   height: 120px;
 }
-/* .icon-antenna {
-  width: 70px;
-  height: 70px;
-} */
+
 .feature-title {
   font-weight: 700;
   font-size: 14px;
@@ -278,6 +268,40 @@ img {
   background-color: #f5f4fa;
   padding-bottom: 94px;
 }
+.soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--primary-white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #afb1b8;
+}
+.soc-link:hover {
+  background-color: var(--acсent-color);
+}
+.soc-link:focus {
+  background-color: var(--acсent-color);
+}
+.soc-link:hover .soc-icon {
+  fill: var(--primary-white-color);
+}
+.soc-link:focus .soc-icon {
+  fill: var(--primary-white-color);
+}
+.soc-item {
+  list-style-type: none;
+}
+.soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.soc-icon {
+  fill: currentColor;
+}
+
 .staff {
   font-weight: 700;
   font-size: 36px;
@@ -292,7 +316,7 @@ img {
 }
 .staff-list {
   display: flex;
-  gap: 30px;
+  column-gap: 30px;
 }
 .staff-title {
   font-weight: 500;
@@ -308,6 +332,7 @@ img {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-align: center;
+  margin-bottom: 13px;
 }
 .staff-id {
   padding-bottom: 30px;
@@ -318,7 +343,7 @@ img {
 }
 /* ------Постоянные клиенты */
 .client {
-  display: block;
+  /* display: flex; */
   width: 170px;
   height: 92px;
   border-color: #afb1b8;
@@ -326,6 +351,12 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 30px;
+}
+.client-list {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 94px;
 }
 .client-title {
   font-weight: 700;
@@ -334,6 +365,8 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+  padding-top: 94px;
+  padding-bottom: 50px;
 }
 
 /* ------- футер ------- */
