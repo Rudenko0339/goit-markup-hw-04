@@ -35,6 +35,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 .list {
   list-style: none;
 }
@@ -60,6 +61,7 @@ img {
 .header-link:hover,
 .header-link:focus {
   color: var(--acсent-color);
+  outline: none;
 }
 
 .header-nav {
@@ -110,6 +112,7 @@ img {
   border-bottom: 1px solid #ececec;
 }
 
+/* навигация авторизации */
 .header-auth {
   display: flex;
   gap: 50px;
@@ -130,9 +133,8 @@ img {
 .header-contact:hover,
 .header-contact:focus {
   color: var(--acсent-color);
+  outline: none;
 }
-
-/* навигация авторизации */
 
 .header-icon {
   margin-right: 10px;
@@ -185,6 +187,7 @@ img {
 .hero-btn:focus {
   color: #ffffff;
   background-color: #188ce8;
+  outline: none;
 }
 
 /* ---наши преимущества, заголовок скрыт ----*/
@@ -273,11 +276,13 @@ img {
 .soc-link:hover,
 .soc-link:focus {
   background-color: var(--acсent-color);
+  outline: none;
 }
 
 .soc-link:hover .soc-icon,
 .soc-link:focus .soc-icon {
   fill: var(--primary-white-color);
+  outline: none;
 }
 .soc-item {
   list-style-type: none;
@@ -334,22 +339,33 @@ img {
   width: calc((100%-90px) / 4);
 }
 /* ------Постоянные клиенты */
-.client {
-  width: 170px;
-  height: 92px;
-  border-color: #afb1b8;
-  border-style: solid;
+.clients {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+.client-link {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
-  fill: #afb1b8;
+  border-style: solid;
   border-radius: 4px;
+  border-width: 1px;
+  width: 170px;
+  height: 92px;
+  border-color: #afb1b8;
+  fill: #afb1b8;
 }
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--acсent-color);
+  fill: var(--acсent-color);
+  outline: none;
+}
+
 .client-list {
   display: flex;
   gap: 30px;
-  padding-bottom: 94px;
 }
 .client-title {
   font-weight: 700;
@@ -358,7 +374,6 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-  padding-top: 94px;
   padding-bottom: 50px;
 }
 .client:hover,
@@ -400,6 +415,7 @@ img {
 .address-link:hover,
 .address-link:focus {
   color: var(--acсent-color);
+  outline: none;
 }
 .mail,
 .tel {
@@ -428,6 +444,9 @@ img {
   color: #ffffff;
   margin-bottom: 20px;
 }
+.footer-list :not(:last-child) {
+  margin-right: 10px;
+}
 
 .footer-list {
   display: flex;
@@ -448,6 +467,7 @@ img {
 .footer-link:hover,
 .footer-link:focus {
   background-color: var(--acсent-color);
+  outline: none;
 }
 
 /* Портфолио */
@@ -497,6 +517,7 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
+  text-decoration: none;
 }
 
 .picture-text {
@@ -504,6 +525,7 @@ img {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+  text-decoration: none;
 }
 
 .card-content {
@@ -512,9 +534,13 @@ img {
   border-top: 0;
 }
 
-.picture-item:hover,
-.picture-item:focus {
+.picture-link {
+  border-radius: 4px;
+  text-decoration: none;
+}
+.picture-link:hover,
+.picture-link:focus {
+  display: block;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
 }
