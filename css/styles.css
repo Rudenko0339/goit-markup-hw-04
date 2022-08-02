@@ -374,7 +374,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 .client:hover,
 .client:focus {
@@ -518,6 +518,7 @@ img {
   letter-spacing: 0.06em;
   margin-bottom: 4px;
   text-decoration: none;
+  color: var(--primary-text-color);
 }
 
 .picture-text {
